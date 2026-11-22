@@ -2,8 +2,66 @@
 <header><small>Soundscapes · Responsible Computing · Chapter 03</small><h1>Fundamentals of Acoustics</h1><p>The physical properties and digital representation of environmental sound</p></header><div class="wrap"><nav class="nav"><a href="../index.html">← Course home</a><span class="pill">60 minutes</span><span class="pill">Reading · Practice · Reflection</span></nav>
 <div class="grid"><main>
 <section class="card"><span class="tag">Learning objectives</span><h2>By the end of this chapter, you should be able to</h2><ul><li>Explain frequency, amplitude, intensity and sound pressure level.</li><li>Distinguish time-domain and frequency-domain representations.</li><li>Explain sampling rate, bit depth and the Nyquist principle.</li><li>Interpret a waveform and spectrogram.</li></ul></section>
+
+
 <section class="card"><h2>One-hour learning plan</h2><div class="time"><div><strong>15 min</strong>Guided reading</div><div><strong>30 min</strong>Practical activity</div><div><strong>15 min</strong>Reflection and quiz</div></div></section>
-<section class="card"><h2>Part 1 · Guided reading <span class="muted">— 15 minutes</span></h2><div class="item"><h3>Sound as a physical signal</h3><p>Sound is a pressure variation that propagates through a medium. Frequency is measured in hertz (Hz), while amplitude describes the size of the pressure variation.</p></div><div class="item"><h3>Digital audio</h3><p>An analogue signal is sampled at discrete time intervals. Sampling rate describes samples per second; bit depth determines the number of possible amplitude values.</p></div><div class="item"><h3>Nyquist principle</h3><p>To represent a frequency component without aliasing, the sampling rate must be greater than twice the highest frequency of interest.</p></div><div class="item"><h3>Visual representations</h3><p>A waveform shows amplitude over time. A spectrogram shows how energy is distributed across time and frequency.</p></div></section>
+<section class="card"><h2>Part 1 · Guided reading <span class="muted">— 15 minutes</span></h2><div class="item">
+	
+	
+<h3>Sound as a physical signal</h3><p>Sound is a pressure variation that propagates through a medium. Frequency is measured in hertz (Hz), while amplitude describes the size of the pressure variation. In the images below, the x-axis shows the time and the y-axis shows the amplitude of the soundwaves. As the Red waveform completes 4 cycles in 0.01 seconds, the number of cyles it completes in 1 second is 400 and hence, the frequency of the soundwave is 400 Hz. Now determine the frequency of the blue waveform. The normalized amplitude is from -2 to 2 in the y-axis of the waveforms. 
+
+<div style="width: 100%;">
+  <figure style="margin: 0; width: 100%;">
+    <img src="images/hz400-2000.png" alt="Description of image" style="display: block; width: 100%; height: auto;">
+    <figcaption style="margin-top: 8px; font-size: 14px; color: #555;">
+      The Red waveform has 4 cycles in 0.01 seconds and the Blue waveform has 20 cycles in 0.01 seconds.
+    </figcaption>
+  </figure>
+</div>
+
+The frequency of the biophony, geophony and anthrophony may be very distinct. 
+
+<table style="width: 100%; border-collapse: collapse; text-align: left; font-family: sans-serif;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid #ddd; padding: 10px;">Sound source</th>
+      <th style="border: 1px solid #ddd; padding: 10px;">Typical acoustic characteristics</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 10px;">Thunder</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Strong low-frequency components</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 10px;">Frog calls</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Often contain low- or mid-frequency components</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 10px;">Bird calls</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Frequently contain mid- to high-frequency components</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ddd; padding: 10px;">Insect sounds</td>
+      <td style="border: 1px solid #ddd; padding: 10px;">Often contain high-frequency components</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+</p></div><div class="item"><h3>Digital audio</h3>
+	
+	
+	
+	
+<p>An analogue signal is sampled at discrete time intervals. Sampling rate describes samples per second; bit depth determines the number of possible amplitude values.</p></div><div class="item">
+	
+	
+	
+	<h3>Nyquist principle</h3><p>To represent a frequency component without aliasing, the sampling rate must be greater than twice the highest frequency of interest.</p></div><div class="item"><h3>Visual representations</h3><p>A waveform shows amplitude over time. A spectrogram shows how energy is distributed across time and frequency.</p></div></section>
 <section class="card"><h2>Part 2 · Practical activity <span class="muted">— 30 minutes</span></h2><h3>Inspect a waveform and spectrogram</h3><ol><li>Open an environmental WAV file in Audacity or a Python notebook.</li><li>Record sampling rate, duration and channel count.</li><li>View its waveform and spectrogram.</li><li>Identify one low- and one high-frequency event, if present.</li><li>Explain what could happen if sampling rate were too low.</li></ol><div class="call"><b>Suggested output:</b> A short written response, annotated diagram, calculation, plot or completed worksheet.</div></section>
 <section class="card"><h2>Part 3 · Reflection and knowledge check <span class="muted">— 15 minutes</span></h2><h3>Reflection prompt</h3><p>Why might a project choose a sampling rate higher than the minimum theoretical requirement?</p><h3>Quick knowledge check</h3><form id="quiz"><div class="quizitem"><strong>1. A 20 kHz highest frequency requires:</strong><label class="option"><input required type="radio" name="q0" value="0"> Below 20 kHz</label><label class="option"><input required type="radio" name="q0" value="1"> Exactly 20 kHz</label><label class="option"><input required type="radio" name="q0" value="2"> Greater than 40 kHz</label></div><div class="quizitem"><strong>2. A spectrogram represents:</strong><label class="option"><input required type="radio" name="q1" value="0"> Only location</label><label class="option"><input required type="radio" name="q1" value="1"> Frequency content changing over time</label><label class="option"><input required type="radio" name="q1" value="2"> Only duration</label></div><button type="button" onclick="grade()">Check answers</button><div id="result" class="result" aria-live="polite"></div></form></section>
 <section class="card"><h2>Further reading and resources</h2><ul><li><a href="https://manual.audacityteam.org/" target="_blank" rel="noopener">Audacity documentation</a></li></ul></section>
